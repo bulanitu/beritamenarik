@@ -3,7 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Example</title>
+    <title>Redirect Example with Ads</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Style untuk kotak iklan */
+        .ad-container {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .ad-box {
+            width: 300px;
+            height: 250px;
+            background-color: #f4f4f4;
+            border: 2px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            font-size: 16px;
+            color: #333;
+        }
+
+        .ad-box a {
+            text-decoration: none;
+            color: inherit; /* Warna teks tetap */
+        }
+
+        .ad-box img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .ad-box:hover {
+            background-color: #e9e9e9;
+            border-color: #999;
+        }
+    </style>
     <script>
         function redirect() {
             // Buka Shopee di tab baru
@@ -17,7 +78,29 @@
     </script>
 </head>
 <body>
-    <h1>Klik tombol di bawah untuk melanjutkan</h1>
+    <h1>klik tombol di bawah untuk melanjutkan</h1>
     <button onclick="redirect()">Klik di sini</button>
+
+    <!-- Kotak iklan -->
+    <div class="ad-container">
+        <div class="ad-box">
+            <a href="https://www.shopee.co.id" target="_blank">
+                <img src="https://via.placeholder.com/300x250.png?text=Iklan+1" alt="Iklan 1">
+                <p>Promo menarik di Shopee!</p>
+            </a>
+        </div>
+        <div class="ad-box">
+            <a href="https://www.tokopedia.com" target="_blank">
+                <img src="https://via.placeholder.com/300x250.png?text=Iklan+2" alt="Iklan 2">
+                <p>Diskon besar-besaran di Tokopedia!</p>
+            </a>
+        </div>
+        <div class="ad-box">
+            <a href="https://www.lazada.co.id" target="_blank">
+                <img src="https://via.placeholder.com/300x250.png?text=Iklan+3" alt="Iklan 3">
+                <p>Dapatkan cashback hingga 50% di Lazada!</p>
+            </a>
+        </div>
+    </div>
 </body>
 </html>
