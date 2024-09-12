@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BERITA VIRAL</title>
+    <title>Berita Viral</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -48,6 +48,8 @@
             text-align: center;
             font-size: 16px;
             color: #333;
+            box-sizing: border-box; /* Menjaga padding dan border di dalam ukuran kotak */
+            overflow: hidden; /* Memastikan konten yang melampaui batas kotak tidak terlihat */
         }
 
         .ad-box a {
@@ -57,7 +59,9 @@
 
         .ad-box img {
             max-width: 100%;
-            height: auto;
+            max-height: 100%;
+            object-fit: cover; /* Menjaga proporsi gambar dan menyesuaikan ukurannya */
+            border-radius: 5px; /* Menambahkan sudut melengkung pada gambar */
         }
 
         .ad-box:hover {
@@ -78,26 +82,26 @@
     </script>
 </head>
 <body>
-    <h1>klik tombol di bawah untuk melanjutkan berita</h1>
+    <h1>Anda akan diarahkan ke berita</h1>
     <button onclick="redirect()">Klik di sini</button>
 
     <!-- Kotak iklan -->
     <div class="ad-container">
         <div class="ad-box">
             <a href="https://s.shopee.co.id/3q4FtNrz1l" target="_blank">
-                <img src="https://imgur.com/K0EP1jm.jpg" alt="Iklan 1">
+                <img src="https://imgur.com/K0EP1jm.jpg?text=Iklan+1" alt="Iklan 1">
                 <p>Promo menarik di Shopee!</p>
             </a>
         </div>
         <div class="ad-box">
             <a href="https://renerebekah.github.io/serbagratis/" target="_blank">
-                <img src="https://imgur.com/jneSShl.jpg" alt="Iklan 2">
+                <img src="https://imgur.com/jneSShl.jpg?text=Iklan+2" alt="Iklan 2">
                 <p>download gratis ebook sesuka kamu!</p>
             </a>
         </div>
         <div class="ad-box">
             <a href="https://www.instagram.com/ceritaajadulu3/" target="_blank">
-                <img src="https://imgur.com/T6hNnNl.jpg" alt="Iklan 3">
+                <img src="https://imgur.com/T6hNnNl.jpg?text=Iklan+3" alt="Iklan 3">
                 <p>follow akun instagram kami!</p>
             </a>
         </div>
