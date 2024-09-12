@@ -2,22 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Page</title>
+    <title>Redirect Example</title>
     <script>
-        window.onload = function() {
-            // Arahkan ke Shopee
-            window.open('https://shopee.co.id', '_blank');
-            // Setelah 5 detik arahkan ke berita bola
+        function redirect() {
+            // Buka Shopee di tab baru
+            window.open('https://s.shopee.co.id/3q4FtNrz1l', '_blank');
+
+            // Setelah 5 detik, arahkan ke web berita bola
             setTimeout(function() {
-                window.location.href = 'https://berita-bola.com';
-            }, 5000); // 5000 ms = 5 detik
-        };
+                window.location.href = 'https://www.bola.com/indonesia/read/5699475/4-fakta-mentereng-maarten-paes-setelah-duel-timnas-indonesia-vs-arab-saudi-bukan-kiper-kaleng-kaleng';
+            }, 5000);
+        }
     </script>
 </head>
-<body>
-    <h1>Mengarahkan Anda...</h1>
-    <p>Anda akan diarahkan ke berita bola dalam 5 detik, setelah membuka Shopee.</p>
+<body onload="redirect()">
+    <h1>Tunggu 5 detik, Anda akan diarahkan ke website bola...</h1>
 </body>
 </html>
